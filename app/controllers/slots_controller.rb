@@ -22,7 +22,7 @@ class SlotsController < ApplicationController
       slot_collections = CreateSlotCollection.call(@slot.reload)
       render json: {slot: @slot.as_json, slot_collections: slot_collections.as_json}
     else
-      render json: @slot.errors, status: :unprocessable_entity
+      render json: {success: false, message: @slot.errors.full_messages}, status: :unprocessable_entity
     end
   end
   

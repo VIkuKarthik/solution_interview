@@ -1,0 +1,656 @@
+{
+	"info": {
+		"_postman_id": "1d20d9a7-1316-4417-9587-664043f435db",
+		"name": "ROR-Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Slots",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/slots",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"slots"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Slots",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/slots",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"slots"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"0a31b5b970e591a56930ffc1cd3ce1f7\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "67ee4271-2e57-40ee-ae54-ad68c96231cb"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.007893"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.15, sql.active_record;dur=1.79, instantiation.active_record;dur=0.08, process_action.action_controller;dur=4.66"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"slots\": [\n        {\n            \"id\": 1,\n            \"start_time\": \"2023-01-20T11:00:00.000Z\",\n            \"end_time\": \"2023-01-20T12:00:00.000Z\",\n            \"total_capacity\": 6,\n            \"created_at\": \"2023-01-20T12:29:42.419Z\",\n            \"updated_at\": \"2023-01-20T12:29:42.419Z\"\n        },\n        {\n            \"id\": 2,\n            \"start_time\": \"2023-01-20T19:00:00.000Z\",\n            \"end_time\": \"2023-01-20T20:00:00.000Z\",\n            \"total_capacity\": 6,\n            \"created_at\": \"2023-01-20T12:49:19.988Z\",\n            \"updated_at\": \"2023-01-20T12:49:19.988Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Slot by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/slots/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"slots",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Slot by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/slots/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"slots",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f2a3ee2606b6d7d1bda6e0404a7883f2\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "5da8f726-96ac-46b5-b450-20bdc952c708"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.011040"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.16, sql.active_record;dur=2.90, instantiation.active_record;dur=0.34, process_action.action_controller;dur=8.44"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"slots\": {\n        \"id\": 2,\n        \"start_time\": \"2023-01-20T19:00:00.000Z\",\n        \"end_time\": \"2023-01-20T20:00:00.000Z\",\n        \"total_capacity\": 6,\n        \"created_at\": \"2023-01-20T12:49:19.988Z\",\n        \"updated_at\": \"2023-01-20T12:49:19.988Z\"\n    },\n    \"slot_collections\": [\n        {\n            \"id\": 5,\n            \"slot_id\": 2,\n            \"start_time\": \"2023-01-20T19:00:00.000Z\",\n            \"end_time\": \"2023-01-20T19:15:00.000Z\",\n            \"capacity\": 1,\n            \"created_at\": \"2023-01-20T12:49:20.027Z\",\n            \"updated_at\": \"2023-01-20T12:49:20.027Z\"\n        },\n        {\n            \"id\": 6,\n            \"slot_id\": 2,\n            \"start_time\": \"2023-01-20T19:15:00.000Z\",\n            \"end_time\": \"2023-01-20T19:30:00.000Z\",\n            \"capacity\": 1,\n            \"created_at\": \"2023-01-20T12:49:20.039Z\",\n            \"updated_at\": \"2023-01-20T12:49:20.039Z\"\n        },\n        {\n            \"id\": 7,\n            \"slot_id\": 2,\n            \"start_time\": \"2023-01-20T19:30:00.000Z\",\n            \"end_time\": \"2023-01-20T19:45:00.000Z\",\n            \"capacity\": 2,\n            \"created_at\": \"2023-01-20T12:49:20.048Z\",\n            \"updated_at\": \"2023-01-20T12:49:20.048Z\"\n        },\n        {\n            \"id\": 8,\n            \"slot_id\": 2,\n            \"start_time\": \"2023-01-20T19:45:00.000Z\",\n            \"end_time\": \"2023-01-20T20:00:00.000Z\",\n            \"capacity\": 2,\n            \"created_at\": \"2023-01-20T12:49:20.055Z\",\n            \"updated_at\": \"2023-01-20T12:49:20.055Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Slot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "slot[start_time]",
+							"value": "19:00",
+							"type": "text"
+						},
+						{
+							"key": "slot[end_time]",
+							"value": "20:00",
+							"type": "text"
+						},
+						{
+							"key": "slot[total_capacity]",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/slots",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"slots"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Slot - Start Time Validation",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "slot[start_time]",
+									"value": "11:00",
+									"type": "text"
+								},
+								{
+									"key": "slot[end_time]",
+									"value": "18:00",
+									"type": "text"
+								},
+								{
+									"key": "slot[total_capacity]",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/slots",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"slots"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c0d57f15052e5196abd076cdee3a427d\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "738223d0-fb98-4212-94d1-cdaadf40db8c"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.006739"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.37, halted_callback.action_controller;dur=0.11, process_action.action_controller;dur=0.97"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"Start Time needs to be future date\"\n}"
+				},
+				{
+					"name": "Add Slot - End Time Validation",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "slot[start_time]",
+									"value": "19:00",
+									"type": "text"
+								},
+								{
+									"key": "slot[end_time]",
+									"value": "17:00",
+									"type": "text"
+								},
+								{
+									"key": "slot[total_capacity]",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/slots",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"slots"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c07b112f6e0d9666a31a0f4bda90a56e\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "9711e1cd-cf29-4693-a388-976b6bc15bdb"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.004028"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.20, halted_callback.action_controller;dur=0.14, process_action.action_controller;dur=0.98"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"End Time should be greated that Start Time\"\n}"
+				},
+				{
+					"name": "Add Slot - Capacity Validation",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "slot[start_time]",
+									"value": "19:00",
+									"type": "text"
+								},
+								{
+									"key": "slot[end_time]",
+									"value": "20:00",
+									"type": "text"
+								},
+								{
+									"key": "slot[total_capacity]",
+									"value": "6.6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/slots",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"slots"
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "5f2abce2-c9c8-440b-bc8c-fb46456680b9"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.008129"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.22, process_action.action_controller;dur=3.70"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": [\n        \"Total capacity must be an integer\"\n    ]\n}"
+				},
+				{
+					"name": "Add Slot",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "slot[start_time]",
+									"value": "19:00",
+									"type": "text"
+								},
+								{
+									"key": "slot[end_time]",
+									"value": "20:00",
+									"type": "text"
+								},
+								{
+									"key": "slot[total_capacity]",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/slots",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"slots"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"676ebc3b83e210ed644ed879edebd01f\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "2598bc66-aed2-4f37-b982-2f7c2dbdbaa3"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.085482"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.28, sql.active_record;dur=42.77, instantiation.active_record;dur=0.27, process_action.action_controller;dur=80.68"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"slot\": {\n        \"id\": 2,\n        \"start_time\": \"2023-01-20T19:00:00.000Z\",\n        \"end_time\": \"2023-01-20T20:00:00.000Z\",\n        \"total_capacity\": 6,\n        \"created_at\": \"2023-01-20T12:49:19.988Z\",\n        \"updated_at\": \"2023-01-20T12:49:19.988Z\"\n    },\n    \"slot_collections\": [\n        {\n            \"id\": 5,\n            \"slot_id\": 2,\n            \"start_time\": \"2023-01-20T19:00:00.000Z\",\n            \"end_time\": \"2023-01-20T19:15:00.000Z\",\n            \"capacity\": 1,\n            \"created_at\": \"2023-01-20T12:49:20.027Z\",\n            \"updated_at\": \"2023-01-20T12:49:20.027Z\"\n        },\n        {\n            \"id\": 6,\n            \"slot_id\": 2,\n            \"start_time\": \"2023-01-20T19:15:00.000Z\",\n            \"end_time\": \"2023-01-20T19:30:00.000Z\",\n            \"capacity\": 1,\n            \"created_at\": \"2023-01-20T12:49:20.039Z\",\n            \"updated_at\": \"2023-01-20T12:49:20.039Z\"\n        },\n        {\n            \"id\": 7,\n            \"slot_id\": 2,\n            \"start_time\": \"2023-01-20T19:30:00.000Z\",\n            \"end_time\": \"2023-01-20T19:45:00.000Z\",\n            \"capacity\": 2,\n            \"created_at\": \"2023-01-20T12:49:20.048Z\",\n            \"updated_at\": \"2023-01-20T12:49:20.048Z\"\n        },\n        {\n            \"id\": 8,\n            \"slot_id\": 2,\n            \"start_time\": \"2023-01-20T19:45:00.000Z\",\n            \"end_time\": \"2023-01-20T20:00:00.000Z\",\n            \"capacity\": 2,\n            \"created_at\": \"2023-01-20T12:49:20.055Z\",\n            \"updated_at\": \"2023-01-20T12:49:20.055Z\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}

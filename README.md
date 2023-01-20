@@ -1,21 +1,23 @@
 # README
 
-NOTE: I couldn't understand the concept of capacity in the question, I have done the logic for slots only
+__Note__: PostMan collection (with sample response) is also added here.
+
 
 Change the creds in the database.yml
 run the application by executing the following command 
 
+```ruby
 rails db:create db:migrate
 rails s
+```
 
+__Sample Request__
 
-sample request
+#### POST
+curl -X POST localhost:3000/slots -d 'slot[start_time]=01:00&slot[end_time]=02:00&slot[total_capacity]=6'
 
-POST
-curl -X POST localhost:3000/slots -d 'slot[start_time]=01:00&slot[end_time]=02:00&slot[total_capacity]=15'
-
-GET
+#### GET
 curl localhost:3000/slots
 
-GET 
+#### GET 
 curl localhost:3000/slots/:id
