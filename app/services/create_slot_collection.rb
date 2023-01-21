@@ -61,4 +61,26 @@ class CreateSlotCollection < ApplicationService
     stack
   end
 
+  # simpler version
+  def capacity_calculation_II 
+    slot_duration = Slot::TIME_INTERVAL
+    capacity = slot.total_capacity
+    total_minutes = (slot.end_time - slot.start_time)/60
+    collection_count = (total_minutes/slot_duration).to_i
+
+    stack = [0]*collection_count
+
+    cc_count = collection_count-1
+    capacity.times do |counter|
+      stack[cc_count] += 1
+      if (collection_count-1 >= cc_count) && (cc_count > 0)
+        cc_count -= 1
+      else
+        cc_count = collection_count-1
+      end
+    end
+
+    stack
+  end
+
 end
